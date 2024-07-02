@@ -24,8 +24,13 @@ fn update_string() {
     // Start with a base string on the heap
     let mut s = String::from("Initial string");
     println!("Before update: {}", s);
+    println!("Capacity:{},Length:{},pointer:{:p}",s.capacity(),s.len(),s.as_ptr());
 
+    for _ in 1..100 {
     // Append some text to the string
     s.push_str(" and some additional text");
-    println!("After update: {}", s);
+    println!("Capacity:{},Length:{},pointer:{:p}",s.capacity(),s.len(),s.as_ptr());
+    }
+    // println!("After update: {}", s);
+
 }
