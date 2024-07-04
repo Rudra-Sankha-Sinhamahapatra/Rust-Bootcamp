@@ -1,8 +1,9 @@
+
 # Rust Bootcamp
 
-# Rust Learning Syllabus
+## Rust Learning Syllabus
 
-## Easy
+### Easy
 
 1. **Installing Rust**
 
@@ -11,33 +12,45 @@
 2. **IDE Setup**
 
    - We will be using Visual Studio Code (VS Code) as our IDE.
-   - Install the Rust extension for VS Code for better development experience.
-   - Maybe You need to install vs code development tools for c or c++ or if have mingw already on your local machine you have to download a toolchain from the command below(if your desktop is windows 64 bit,for more details visit their website or search in the web)
 
-   ```bash
-   rustup toolchain install
-   stable-x86_64-pc-windows-gnu
-   ```
-
-   ```bash
-   rustup default stable-x86_64-pc-windows-gnu
-   ```
-
-   - Verify The Installation
+- You might need to install VS Code development tools for C or C++. If you have MinGW already on your local machine, you can download a toolchain with the following commands (if your desktop is Windows 64-bit). For more details, visit their website or search the web:
 
 ```bash
-   rustc --version
+rustup toolchain install stable-x86_64-pc-windows-gnu
 ```
 
 ```bash
- cargo --version
+rustup default stable-x86_64-pc-windows-gnu
 ```
 
-```images
+- Verify the installation:
+
+```bash
+rustc --version
+```
+
+```bash
+cargo --version
+```
+
+- Install the Rust extension for VS Code for better development experience.
+
 ![rust-analyzer](image.png)
-```
 
 3. **Initializing a Project Locally**
+
+   ```bash
+    mkdir new_folder
+    cd new_folder
+    cargo init
+   ```
+
+   or
+
+   ```bash
+   cargo new new_folder
+   cd new_folder
+   ```
 
    - How to set up a new Rust project on your local machine using Cargo.
 
@@ -72,7 +85,7 @@
 11. **Package Management**
     - Managing packages and dependencies with Cargo.
 
-## Hard
+### Hard
 
 1. **Memory Management**
 
@@ -121,3 +134,4 @@
 
 6. **Futures/Async Await**
    - Writing asynchronous code with futures and async/await.
+
