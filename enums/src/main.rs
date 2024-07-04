@@ -1,3 +1,5 @@
+use std::fs;
+
 enum Direction {
     North,
     East,
@@ -24,6 +26,11 @@ fn calculate_area(_shape: Shape) -> f64 {
     return ans;
 }
 
+// enum Result<T,U>{
+//    Ok(T),
+//    Err(U)
+// }
+
 fn main() {
     let north = Direction::North;
     let south = Direction::South;
@@ -46,6 +53,27 @@ fn main() {
     println!("Circle Area:{}", circle_area);
     println!("Square Area:{}", square_area);
     println!("Rectangle Area:{}", rectangle_area);
+
+    //error handling
+    let res=fs::read_to_string("example.txt");
+   //Similar to Try Catch
+    match res{
+        Ok(content)=>{
+         println!("File Content:{}",content);
+        }
+        Err(err)=>{
+         println!("Error:{}",err);
+        }
+    }
+    println!("Hii There");
+    read_from_file_unsafe("ex.txt".to_string());
+    println!("Hii There");
+ 
 }
 
 fn move_around(_direction: Direction) {}
+
+fn read_from_file_unsafe(_file_content:String)->String{
+let res=fs::read_to_string("example.txt");
+return res.unwrap();
+}
