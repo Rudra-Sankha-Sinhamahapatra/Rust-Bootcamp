@@ -26,10 +26,6 @@ fn calculate_area(_shape: Shape) -> f64 {
     return ans;
 }
 
-// enum Result<T,U>{
-//    Ok(T),
-//    Err(U)
-// }
 
 fn main() {
     let north = Direction::North;
@@ -68,6 +64,14 @@ fn main() {
     println!("Hii There");
     read_from_file_unsafe("ex.txt".to_string());
     println!("Hii There");
+
+    let t1=String::from("Rudra");
+    let res=find_first_a(t1);
+
+    match res{
+        Some(index)=>println!("Letter 'a' is found at index: {}",index),
+        None=>println!("The letter 'a' is not found in the string"),
+    }
  
 }
 
@@ -76,4 +80,15 @@ fn move_around(_direction: Direction) {}
 fn read_from_file_unsafe(_file_content:String)->String{
 let res=fs::read_to_string("example.txt");
 return res.unwrap();
+}
+
+//using option enum 
+
+fn find_first_a(s:String)->Option<i32>{
+    for(index,character) in s.chars().enumerate(){
+        if character == 'a' {
+            return  Some(index as i32);
+        }
+    }
+    return None;
 }
