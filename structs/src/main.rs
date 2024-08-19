@@ -18,29 +18,26 @@ impl Rect {
         self.width * self.height
     }
 
-    fn perimeter(& self)->u32{
-        self.width+self.height
+    fn perimeter(&self) -> u32 {
+        self.width + self.height
     }
 }
 
-
-struct Square{
-  side:u64
+struct Square {
+    side: u64,
 }
 
-impl Debug for Square{
-    
+impl Debug for Square {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-     write!(f, "the square prints:{}",self.side*self.side)
+        write!(f, "the square prints:{}", self.side * self.side)
     }
 }
-
 
 struct Hello;
 
-impl Hello{
-    fn hello(& self)->String{
-     "Hello World".to_string()
+impl Hello {
+    fn hello(&self) -> String {
+        "Hello World".to_string()
     }
 }
 
@@ -68,12 +65,10 @@ fn main() {
     println!("Area of the Rectangle is :{}", rect.area());
     println!("Perimeter of the Rectangle is :{}", rect.perimeter());
 
-    let square=Square{
-    side:8
-    };
+    let square = Square { side: 8 };
 
-    println!("All about Square:{:?}",square);
+    println!("All about Square:{:?}", square);
 
-    let v1=Hello;
-    println!("{}",v1.hello())
+    let v1 = Hello;
+    println!("{}", v1.hello())
 }
