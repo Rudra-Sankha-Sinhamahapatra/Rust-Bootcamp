@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "is_even",
+    "fibonacci"
+    # add other subproject folders here
+]
