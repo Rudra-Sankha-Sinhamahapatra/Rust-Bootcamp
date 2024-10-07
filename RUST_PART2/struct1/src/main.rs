@@ -1,3 +1,4 @@
+use struct1::rectarea;
 struct User {
     first_name:String,
     last_name: String,
@@ -14,5 +15,7 @@ fn main() {
     println!("{}",user.first_name);
     println!("{}",user.last_name);
     println!("{}",user.age);
+    
+    rectarea();
 }
 
