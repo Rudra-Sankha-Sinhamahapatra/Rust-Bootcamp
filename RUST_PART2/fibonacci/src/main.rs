@@ -1,5 +1,5 @@
 fn main() {
-    println!("{}",fib(10));
+    println!("{}",fib(3));
 }
 
 fn fib(num:u32) -> u32 {
@@ -11,7 +11,7 @@ fn fib(num:u32) -> u32 {
   }
 
 
-  for _ in 0..(num - 1) {
+  for _ in 2..(num + 1) {
     let t = b;
     b = b+a;
     a = t;
