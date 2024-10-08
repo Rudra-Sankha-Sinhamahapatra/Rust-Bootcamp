@@ -12,6 +12,10 @@ impl Rect {
     fn perimeter(&self) -> u32 {
         2 * (self.height + self.width)
     }
+
+    fn debug() -> i32 {
+        return 20;
+    }
 }
 
 pub fn rectarea (){
@@ -22,4 +26,5 @@ pub fn rectarea (){
 
     print!("The area of the rectangle is {}\n",rect.area());
     print!("The perimeter of the rectangle is {}\n",rect.perimeter());
+    println!("{}",Rect::debug());
 }
