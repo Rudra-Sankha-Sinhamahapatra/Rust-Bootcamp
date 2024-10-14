@@ -1,8 +1,11 @@
 use std::io::stdin;
 use vectors::lib;
+mod opt;
+
+use opt::opt;
 fn main() {
     lib(); 
-
+    opt();
     let mut input = String::new();
 
     println!("Enter vector elements (integers)");
@@ -13,7 +16,6 @@ fn main() {
     
     println!("{:?}",new_vec);
     println!("From even func: {:?} is {:?}",even(& mut new_vec),new_vec);
-
 }
 
 // approach 1
