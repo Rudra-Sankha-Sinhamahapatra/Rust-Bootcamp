@@ -3,4 +3,4 @@ members = [
     "is_even",
     "fibonacci"
     # add other subproject folders here
-, "struct1", "enums1", "numbers_bet", "read_toString", "pkg_mgmt", "prac"]
+, "struct1", "enums1", "numbers_bet", "read_toString", "pkg_mgmt", "prac", "vectors"]
