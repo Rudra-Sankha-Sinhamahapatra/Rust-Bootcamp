@@ -1,3 +1,14 @@
+mod opt;
+mod map;
+mod filter;
+mod assignment1;
+
+use opt::opt;
+use iterators::lib;
+use map::map;
+use filter::filter;
+use assignment1::assignment_1;
+
 fn main() {
    let mut nums = vec![1,2,3];
    let iter = nums.iter();
@@ -19,4 +30,10 @@ fn main() {
    }
 
    println!("{:?}",nums);
+   lib();
+   opt();
+   map();
+   filter();
+   assignment_1();
+
 }
