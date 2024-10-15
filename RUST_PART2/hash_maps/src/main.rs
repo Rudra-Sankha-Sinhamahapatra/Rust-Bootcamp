@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use hash_maps::lib;
 
 fn main() {
   let mut users = HashMap::new();
@@ -15,4 +16,6 @@ fn main() {
     Some(age) => println!("age is {:?}",age),
     None => println!("user is noy present in db"),
   }
+
+  lib();
 }
