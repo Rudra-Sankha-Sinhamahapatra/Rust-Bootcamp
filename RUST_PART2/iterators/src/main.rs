@@ -2,7 +2,9 @@ mod opt;
 mod map;
 mod filter;
 mod assignment1;
+mod hm;
 
+use hm::hm;
 use opt::opt;
 use iterators::lib;
 use map::map;
@@ -35,5 +37,6 @@ fn main() {
    map();
    filter();
    assignment_1();
+   hm();
 
 }
