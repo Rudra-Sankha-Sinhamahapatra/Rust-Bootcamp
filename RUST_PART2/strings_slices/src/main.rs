@@ -1,5 +1,7 @@
 use strings_slices::lib;
+mod opt;
 
+use opt::opt;
 fn main() {
     let word = String::from("hello");
     let word2 = &word[0..3];
@@ -10,6 +12,7 @@ fn main() {
     println!("{}",find_first_word(&str));
     
     lib();
+    opt();
 }
 
 fn find_first_word (str:&String)-> &str {
